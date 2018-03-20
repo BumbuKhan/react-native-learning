@@ -1,29 +1,14 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View} from 'react-native';
 
-export default class LotsOfStyle extends Component {
+export default class FixedDimentions extends Component {
     render() {
         return(
             <View>
-                <Text style={styles.red}>just red</Text>
-                <Text style={styles.blue}>just blue</Text>
-                <Text style={[styles.bigblue, styles.red]}>bigblue, then red</Text>
-                <Text style={[styles.red, styles.bigblue]}>red, then bigblue</Text>
+                <View style={{width: 100, height: 100, backgroundColor: 'blue'}}></View>
+                <View style={{width: 150, height: 150, backgroundColor: 'red'}}></View>
+                <View style={{width: 200, height: 200, backgroundColor: 'green'}}></View>
             </View>
         );
     }
 }
-
-const styles = StyleSheet.create({
-    red: {
-        color: 'red',
-    },
-    blue: {
-      color: 'blue',
-    },
-    bigblue: {
-        color: 'blue',
-        fontSize: 30,
-        fontWeight: 'bold'
-    }
-});
