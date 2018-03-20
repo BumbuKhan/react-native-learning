@@ -1,13 +1,22 @@
 import React, {Component} from 'react';
-import {Image} from 'react-native';
+import {Text, View} from 'react-native';
 
-export default class App extends Component {
+class Greeteng extends Component {
     render() {
-        let picture = {
-            uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'};
-
         return (
-            <Image source={picture} style={{width: '100%', height: 200}}/>
-        )
+            <Text>Hello {this.props.name}</Text>
+        );
+    }
+}
+
+export default class LotsOfGreeteng extends Component {
+    render() {
+        return (
+            <View style={{alignItems: 'center'}}>
+                <Greeteng name="Gurban"/>
+                <Greeteng name="Famil"/>
+                <Greeteng name="Nurik"/>
+            </View>
+        );
     }
 }
