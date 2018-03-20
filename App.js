@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 import {View} from 'react-native';
 
-export default class FixedDimentions extends Component {
+export default class MyComponent extends Component {
     render() {
         return(
-            // we could also set {width: 500} for the parent View
-            <View style={{flex: 1}}>
-                <View style={{flex: 1, backgroundColor: 'blue'}}></View>
-                <View style={{flex: 2, backgroundColor: 'red'}}></View>
-                <View style={{flex: 3, height: 200, backgroundColor: 'green'}}></View>
+            // flexDirection is defaulted by 'column'
+            <View style={{flex: 1, flexDirection: 'row'}}>
+                <View style={{width: 50, height: 50, backgroundColor: 'blue'}}></View>
+                <View style={{width: 50, height: 50, backgroundColor: 'red'}}></View>
+                <View style={{width: 50, height: 50, backgroundColor: 'green'}}></View>
             </View>
         );
     }
