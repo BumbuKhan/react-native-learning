@@ -1,19 +1,26 @@
 import React, {Component} from 'react';
-import {View} from 'react-native';
+import {Text, TextInput, View} from 'react-native';
 
-export default class MyComponent extends Component {
+export default class PizzaTranslator extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            text: ''
+        }
+    }
+
     render() {
-        return (
-            // flexDirection is defaulted by 'column'
-            <View style={{
-                flex: 1,
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center'
-            }}>
-                <View style={{width: 50, height: 50, backgroundColor: 'blue'}}></View>
-                <View style={{width: 50, height: 50, backgroundColor: 'red'}}></View>
-                <View style={{width: 50, height: 50, backgroundColor: 'green'}}></View>
+        return(
+            <View style={{padding: 10}}>
+                <TextInput
+                    style={{height: 40}}
+                    placeholder="Tyle here to translate"
+                    onChangeText={(text) => this.setState({text})}></TextInput>
+
+                <Text style={{padding: 10}}>
+                    {this.state.text.split(' ').map((word) => word && '🍕').join(' ')}
+                </Text>
             </View>
         );
     }
