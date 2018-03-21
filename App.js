@@ -1,12 +1,17 @@
 import React, {Component} from 'react';
-import {Text, ScrollView} from 'react-native';
+import {Text, FlatList, View} from 'react-native';
 
-export default class ButtonComponent extends Component {
+export default class FlatListBasic extends Component {
     render() {
-        return(
-            <ScrollView>
-                <Text style={{fontSize: 140}}>Lorem ipsum dolor</Text>
-            </ScrollView>
+        return (
+            <View>
+                <FlatList data={[
+                    {key: 'Devin'},
+                    {key: 'Jackson'},
+                    {key: 'Mike'},
+                    {key: 'Bob'},
+                ]} renderItem={({item}) => <Text>{item.key}</Text>} />
+            </View>
         );
     }
 }
