@@ -18,7 +18,7 @@ class DetailsScreen extends Component {
         return (
             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
                 <Text>Details screen</Text>
-                <Button onPress={() => this.props.navigation.navigate('Details')} title="Go to details"/>
+                <Button title="Go back to the Home screen" onPress={() => this.props.navigation.goBack()} />
             </View>
         );
     }
