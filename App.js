@@ -5,8 +5,8 @@ import {StackNavigator} from 'react-navigation';
 class HomeScreen extends Component {
     render() {
         return (
-            <View>
-                <Text style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>Home screen</Text>
+            <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+                <Text>Home screen</Text>
                 <Button onPress={() => this.props.navigation.navigate('Details')} title="Go to details"/>
             </View>
         );
@@ -16,8 +16,9 @@ class HomeScreen extends Component {
 class DetailsScreen extends Component {
     render() {
         return (
-            <View>
-                <Text style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>Details screen</Text>
+            <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+                <Text>Details screen</Text>
+                <Button onPress={() => this.props.navigation.navigate('Details')} title="Go to details"/>
             </View>
         );
     }
